@@ -17,7 +17,7 @@ gem "thruster", require: false
 gem "tailwindcss-rails"
 
 group :development, :test do
-  gem "sqlite3", "~> 1.4"
+  gem "sqlite3", "~> 2.4"
   gem "debug", platforms: %i[mri windows], require: "debug/prelude"
   gem "brakeman", require: false
   gem "rubocop-rails-omakase", require: false
@@ -33,5 +33,5 @@ group :test do
 end
 
 group :production do
-  gem "pg", "~> 1.5"
+  gem "pg", "~> 1.1"
 end
