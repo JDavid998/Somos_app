@@ -1,4 +1,37 @@
-<div>
-  <h1 class="font-bold text-4xl">StaticPages#root</h1>
-  <p>Find me in app/views/static_pages/root.html.erb</p>
+<div class="items-center justify-center min-h-full min-w-full bg-gray-900 border-2 border-gray-600 p-8 space-y-6 rounded-lg">
+  <div class="justify-center">
+  </div>
+  <h1 class="text-4xl font-roboto-mono font-bold justify-center text-center">ROOT</h1>
+  <p class="text-center font-roboto-mono font-semibold">Propuesta valor</p>
+  <p class="text-center font-roboto-mono">SOMOS es una empreza contruida a traves de tecnologias propias al no tercerizar estas infraestructuras podemos ofrecer un servicio al cliente eficaz, personalizado y con una conexion dedicaca y ultraveloz, ofreciendo precios competitivos y accesibles para el consumidor.
+  </p>
+  <p class="text-center font-roboto-mono">Somos busca conectar a todo los hogares colombianos actualmente con presencia en bogota y medellin</p>
+  <div class="bg-gray-800 border-yellow-400 border-2 border-black rounded-lg shadow-md p-4 text-center">
+    <p class="text-lg font-roboto-mono font-bold text-yellow-400">Hora: <span id="hora-actual"><%= @Hora_actual.strftime("%H:%M:%S") %></span></p>
+    <p class="text-md font-roboto-mono font-bold text-yellow-400">Fecha: <span id="fecha-actual"><%= @Hfecha %></span></p>
+
+  </div>
+
+  <div class="flex space-x-4">
+    <button class="flex-1 bg-gray-800 border-2 border-yellow-400 text-yellow-400 font-roboto-mono font-bold py-3 px-6 rounded hover:bg-gray-700 hover:text-yellow-300" onclick="location.href='<%= url_for(controller: :static_pages, action: :somos) %>'">
+      SOMOS
+    </button>
+
+    <button class="flex-1 bg-gray-800 border-2 border-yellow-400 text-yellow-400 font-roboto-mono font-bold py-3 px-6 rounded hover:bg-gray-700 hover:text-yellow-300" onclick="location.href='<%= url_for(controller: :static_pages, action: :tech) %>'">
+      TECH
+    </button>
+  </div>
+  <script>
+    function reloj() {
+      const hour = new Date()
+      const format = hour.toLocaleTimeString("es-CO", { hour12: false})
+      const date = hour.toLocaleDateString("es-CO", { year: 'numeric', month: 'numeric', day: 'numeric' })
+      
+      document.getElementById("hora-actual").innerHTML = format
+      document.getElementById("fecha-actual").innerHTML = date
+    }
+
+    setInterval(reloj, 1000);
+    reloj();
+  </script>
 </div>

@@ -1,4 +1,14 @@
-<div>
-  <h1 class="font-bold text-4xl">StaticPages#tech</h1>
-  <p>Find me in app/views/static_pages/tech.html.erb</p>
+<div class="items-center justify-center min-h-full min-w-full bg-gray-900 border-2 border-gray-600 p-8 space-y-6 rounded-lg">
+  <h1 class="text-4xl font-roboto-mono font-bold text-center">TECH</h1>
+  <p class="font-roboto-mono font-semibold text-center">Github</p>
+  <div class="flex space-x-4  justify-center">
+   <button class="flex-1 bg-gray-800 border-2 border-yellow-400 text-yellow-400 font-roboto-mono font-bold py-3 px-6 rounded hover:bg-gray-700 hover:text-yellow-300" onclick="location.href='<%= root_path %>'">
+    ROOT
+  </button>
+
+  <button class="flex-1 bg-gray-800 border-2 border-yellow-400 text-yellow-400  font-roboto-mono font-bold py-3 px-6 rounded hover:bg-gray-700 hover:text-yellow-300" onclick="location.href='<%= url_for(controller: :static_pages, action: :somos) %>'">
+    SOMOS
+  </button>
+</div>
+
 </div>

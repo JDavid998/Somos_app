@@ -19,10 +19,11 @@
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+    <%= image_tag "logo_correo.png", class: "h-12 mx-auto py-3 px-6" %>
   </head>
 
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+  <body class="bg-black min-h-screen">
+    <main class="container mx-auto mt-6 px-5 flex">
       <%= yield %>
     </main>
   </body>
