@@ -1,20 +1,22 @@
 <div class="items-center justify-center min-h-full min-w-full bg-gray-900 border-2 border-gray-600 p-8 space-y-6 rounded-lg">
-  <div class="relative w-full h-48">
-    <%= image_tag "somos_max.jpg", class: "w-full h-full object-cover" %>
-    <div class="absolute inset-0 flex items-center justify-center">
-      <h1 class="text-4xl font-roboto-mono text-yellow-500 font-bold text-center">ROOT</h1>
-
+  <div class="bg-black rounded-lg w-full p-6">
+    <h1 class="text-4xl font-roboto-mono text-yellow-500 font-bold text-center mb-4">ROOT</h1>
+    <div class="relative w-full">
+      <%= image_tag "basic_orb_center.png", class: "w-auto max-w-full h-auto mx-auto" %>
+      <div class="absolute top-4 left-4 right-4 bg-black/60 rounded-lg p-4 space-y-3">
+        <p class="font-roboto-mono font-bold text-yellow-400 text-2xl text-center">Propuesta valor</p>
+        <p class="font-roboto-mono text-white text-base leading-relaxed text-justify">
+          En SOMOS construimos nuestra propia tecnología porque creemos que la mejor forma de dar un buen servicio es no depender de terceros.
+          Así logramos ofrecer una conexión dedicada, estable y el internet más rápido de Colombia, acompañado de un soporte cercano y efectivo.<br>
+          Nuestro propósito es conectar a todos los hogares del país con internet de calidad, empezando por Bogotá y Medellín, siempre con precios justos y accesibles para las familias.
+        </p>
+      </div>
+      <div class="absolute bottom-4 left-4 right-4 bg-transparent border-yellow-400 border-2 rounded-lg shadow-md p-4 text-center">
+        <p class="text-lg font-roboto-mono font-bold text-yellow-400">Hora: <span id="hora-actual"><%= @Hora_actual.strftime("%H:%M:%S") %></span></p>
+        <p class="text-md font-roboto-mono font-bold text-yellow-400">Fecha: <span id="fecha-actual"><%= @Hfecha %></span></p>
+      </div>
     </div>
-  </div>
-  <p class="text-center font-roboto-mono font-bold text-yellow-400 text-2x1">Propuesta valor</p>
-  <p class="text-center font-roboto-mono text-white text-justify">En SOMOS construimos nuestra propia tecnología porque creemos que la mejor forma de dar un buen servicio es no depender de terceros.
-     Así logramos ofrecer una conexión dedicada, estable y el internet más rápido de Colombia, acompañado de un soporte cercano y efectivo.<br>
-     Nuestro propósito es conectar a todos los hogares del país con internet de calidad, empezando por Bogotá y Medellín, siempre con precios justos y accesibles para las familias.
-  </p>
-  <div class="bg-gray-800 border-yellow-400 border-2 border-black rounded-lg shadow-md p-4 text-center">
-    <p class="text-lg font-roboto-mono font-bold text-yellow-400">Hora: <span id="hora-actual"><%= @Hora_actual.strftime("%H:%M:%S") %></span></p>
-    <p class="text-md font-roboto-mono font-bold text-yellow-400">Fecha: <span id="fecha-actual"><%= @Hfecha %></span></p>
-
+    
   </div>
 
   <div class="flex space-x-4">
