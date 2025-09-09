@@ -1,11 +1,16 @@
 <div class="items-center justify-center min-h-full min-w-full bg-gray-900 border-2 border-gray-600 p-8 space-y-6 rounded-lg">
-  <div class="justify-center">
+  <div class="relative w-full h-48">
+    <%= image_tag "somos_max.jpg", class: "w-full h-full object-cover" %>
+    <div class="absolute inset-0 flex items-center justify-center">
+      <h1 class="text-4xl font-roboto-mono text-yellow-500 font-bold text-center">ROOT</h1>
+
+    </div>
   </div>
-  <h1 class="text-4xl font-roboto-mono font-bold justify-center text-center">ROOT</h1>
-  <p class="text-center font-roboto-mono font-semibold">Propuesta valor</p>
-  <p class="text-center font-roboto-mono">SOMOS es una empreza contruida a traves de tecnologias propias al no tercerizar estas infraestructuras podemos ofrecer un servicio al cliente eficaz, personalizado y con una conexion dedicaca y ultraveloz, ofreciendo precios competitivos y accesibles para el consumidor.
+  <p class="text-center font-roboto-mono font-bold text-yellow-400 text-2x1">Propuesta valor</p>
+  <p class="text-center font-roboto-mono text-white text-justify">En SOMOS construimos nuestra propia tecnología porque creemos que la mejor forma de dar un buen servicio es no depender de terceros.
+     Así logramos ofrecer una conexión dedicada, estable y el internet más rápido de Colombia, acompañado de un soporte cercano y efectivo.<br>
+     Nuestro propósito es conectar a todos los hogares del país con internet de calidad, empezando por Bogotá y Medellín, siempre con precios justos y accesibles para las familias.
   </p>
-  <p class="text-center font-roboto-mono">Somos busca conectar a todo los hogares colombianos actualmente con presencia en bogota y medellin</p>
   <div class="bg-gray-800 border-yellow-400 border-2 border-black rounded-lg shadow-md p-4 text-center">
     <p class="text-lg font-roboto-mono font-bold text-yellow-400">Hora: <span id="hora-actual"><%= @Hora_actual.strftime("%H:%M:%S") %></span></p>
     <p class="text-md font-roboto-mono font-bold text-yellow-400">Fecha: <span id="fecha-actual"><%= @Hfecha %></span></p>

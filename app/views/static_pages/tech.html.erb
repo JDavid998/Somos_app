@@ -1,6 +1,25 @@
 <div class="items-center justify-center min-h-full min-w-full bg-gray-900 border-2 border-gray-600 p-8 space-y-6 rounded-lg">
+  <div class="relative w-full h-48">
+    <%= image_tag "somos_lamps.gif", class: "w-full h-full object-cover" %>
+ <div class="absolute inset-0 flex items-center justify-center">
   <h1 class="text-4xl font-roboto-mono font-bold text-center">TECH</h1>
-  <p class="font-roboto-mono font-semibold text-center">Github</p>
+ </div>
+  </div>
+
+  <div class="bg-gray-800 border-2 border-yellow-400 p-4 rounded-lg text-center">
+    <div class="bg-gray-900 border-2 border-yellow-400 font-roboto-mono font-bold text-yellow-400 text-2x1 p-4">¿Que es Convention over Configuration (CoC) 
+      <p class =" text-sm font-normal font-roboto-mono text-justify text-white">Se define como la practica de minimizar la configuracion necesaria para que una aplicacion funcione.
+         Esto significa que, en lugar de tener que especificar cada detalle de la configuracion, se establecen valores predeterminados y convenciones que permiten que la
+        aplicacion funcione sin necesidad de configuracion adicional.</p>
+    </div><br>
+    <div class="bg-gray-900 border-2 border-yellow-400 font-roboto-mono font-bold text-yellow-400 text-2x1 p-4">¿Qué es el enrutamiento RESTful?
+      <p class =" text-sm font-normal font-roboto-mono text-justify text-white">Es un principio de desarrollo de software que enfatiza la importancia de evitar la duplicación de código y lógica en un sistema.
+         El objetivo principal de DRY es mejorar la mantenibilidad, legibilidad y eficiencia del código al reducir la redundancia y promover la reutilización.
+         Al seguir este principio, los desarrolladores pueden minimizar errores, facilitar actualizaciones y cambios, y crear sistemas más coherentes y fáciles de entender.</p>
+         </div>
+    </div>
+  
+  
   <div class="flex space-x-4  justify-center">
    <button class="flex-1 bg-gray-800 border-2 border-yellow-400 text-yellow-400 font-roboto-mono font-bold py-3 px-6 rounded hover:bg-gray-700 hover:text-yellow-300" onclick="location.href='<%= root_path %>'">
     ROOT
