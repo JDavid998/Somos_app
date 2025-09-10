@@ -1,33 +1,251 @@
-<div class="items-center justify-center min-h-full min-w-full bg-gray-900 border-2 border-gray-600 p-8 space-y-6 rounded-lg">
-  <div class="relative w-full h-48">
-    <%= image_tag "somos_lamps.gif", class: "w-full h-full object-cover" %>
- <div class="absolute inset-0 flex items-center justify-center">
-  <h1 class="text-4xl font-roboto-mono font-bold text-center">TECH</h1>
- </div>
-  </div>
-
-  <div class="bg-gray-800 border-2 border-yellow-400 p-4 rounded-lg text-center">
-    <div class="bg-gray-900 border-2 border-yellow-400 font-roboto-mono font-bold text-yellow-400 text-2x1 p-4">¿Que es Convention over Configuration (CoC) 
-      <p class =" text-sm font-normal font-roboto-mono text-justify text-white">Se define como la practica de minimizar la configuracion necesaria para que una aplicacion funcione.
+<div class="items-center justify-center min-h-full min-w-full bg-gray-900 border-2 border-gray-600 p-6 space-y-2 rounded-lg">
+  <div class="relative w-full min-h-48">
+    <%= image_tag "somos_lamps.gif", class: "w-full h-48 object-cover" %>
+  <h1 class="absolute inset-0 flex items-center justify-center text-4xl font-roboto-mono font-bold text-center text-black">TECH</h1>
+    </div>
+    
+    <div class="bg-gray-800 border-2 border-yellow-400 p-2 rounded-lg text-center space-y-2 mt-4 mb-4">
+    <div class="bg-gray-900 border-2 border-yellow-400 font-roboto-mono rounded-lg font-bold text-yellow-400 text-2x1 p-2 mb-4">¿Que es Convention over Configuration (CoC) 
+      <p class ="text-sm font-normal font-roboto-mono text-justify text-white mt-1">Se define como la practica de minimizar la configuracion necesaria para que una aplicacion funcione.
          Esto significa que, en lugar de tener que especificar cada detalle de la configuracion, se establecen valores predeterminados y convenciones que permiten que la
         aplicacion funcione sin necesidad de configuracion adicional.</p>
-    </div><br>
-    <div class="bg-gray-900 border-2 border-yellow-400 font-roboto-mono font-bold text-yellow-400 text-2x1 p-4">¿Qué es el enrutamiento RESTful?
-      <p class =" text-sm font-normal font-roboto-mono text-justify text-white">El diseño REST es una práctica para la construcción de APIs web que se basa en identificar los recursos a través de URIs (Uniform Resource Identifiers). Estos recursos suelen representarse con sustantivos, como por ejemplo usuarios o productos.
-
-Para interactuar con dichos recursos, se utilizan los verbos del protocolo HTTP: GET, POST, PUT y DELETE, que definen las operaciones que se pueden realizar sobre cada uno de ellos.</p>
-         </div>
     </div>
-  
-  
-  <div class="flex space-x-4  justify-center">
-   <button class="flex-1 bg-gray-800 border-2 border-yellow-400 text-yellow-400 font-roboto-mono font-bold py-3 px-6 rounded hover:bg-gray-700 hover:text-yellow-300" onclick="location.href='<%= root_path %>'">
-    ROOT
-  </button>
+    <div class="bg-gray-900 border-2 border-yellow-400 font-roboto-mono rounded-lg font-bold text-yellow-400 text-2x1 p-2 mb-4">¿Qué es el enrutamiento RESTful?
+      <p class ="text-sm font-normal font-roboto-mono text-justify text-white mt-1">El diseño REST es una práctica para la construcción de APIs web que se basa en identificar los recursos a través de URIs (Uniform Resource Identifiers). 
+        Estos recursos suelen representarse con sustantivos, como por ejemplo usuarios o productos.
+        Para interactuar con dichos recursos, se utilizan los verbos del protocolo HTTP: GET, POST, PUT y DELETE, que definen las operaciones que se pueden realizar sobre cada uno de ellos.</p>
 
-  <button class="flex-1 bg-gray-800 border-2 border-yellow-400 text-yellow-400  font-roboto-mono font-bold py-3 px-6 rounded hover:bg-gray-700 hover:text-yellow-300" onclick="location.href='<%= url_for(controller: :static_pages, action: :somos) %>'">
-    SOMOS
-  </button>
-</div>
+         <div class="overflow-x-auto mt-4">
+           <div class="min-w-full border-2 border-gray-300 rounded-lg font-roboto-mono text-yellow-400 text-sm">
+             <div class="grid grid-cols-4">
+               <div class="bg-black font-bold py-2 px-3 border-b-2 border-yellow-400 rounded-tl-lg">HTTP request</div>
+               <div class="bg-black font-bold py-2 px-3 border-b-2 border-yellow-400">URL</div>
+               <div class="bg-black font-bold py-2 px-3 border-b-2 border-yellow-400">Action</div>
+               <div class="bg-black font-bold py-2 px-3 border-b-2 border-yellow-400 rounded-tr-lg">Proposito</div>
+             </div>
+             <div class="grid grid-cols-4 border-b border-gray-700 bg-gray-950 text-white">
+               <div class="py-1 px-3 border-r border-gray-700 text-left">GET</div>
+               <div class="py-1 px-3 border-r border-gray-700 text-left">/users</div>
+               <div class="py-1 px-3 border-r border-gray-700 text-left">index</div>
+               <div class="py-1 px-3 text-left">Mostrar todos los usuarios</div>
+             </div>
+             <div class="grid grid-cols-4 border-b border-gray-700 bg-black text-white">
+               <div class="py-1 px-3 border-r border-gray-700 text-left">GET</div>
+               <div class="py-1 px-3 border-r border-gray-700 text-left">/users/1</div>
+               <div class="py-1 px-3 border-r border-gray-700 text-left">show</div>
+               <div class="py-1 px-3 text-left">Mostrar el usuario con ID 1</div>
+             </div>
+             <div class="grid grid-cols-4 border-b border-gray-700 bg-gray-950 text-white">
+               <div class="py-1 px-3 border-r border-gray-700 text-left">GET</div>
+               <div class="py-1 px-3 border-r border-gray-700 text-left">/users/new</div>
+               <div class="py-1 px-3 border-r border-gray-700 text-left">new</div>
+               <div class="py-1 px-3 text-left">Mostrar el formulario para crear un nuevo usuario</div>
+             </div>
+             <div class="grid grid-cols-4 border-b border-gray-700 bg-black text-white">
+               <div class="py-1 px-3 border-r border-gray-700 text-left">POST</div>
+               <div class="py-1 px-3 border-r border-gray-700 text-left">/users</div>
+               <div class="py-1 px-3 border-r border-gray-700 text-left">create</div>
+               <div class="py-1 px-3 text-left">Crear un nuevo usuario</div>
+             </div>
+             <div class="grid grid-cols-4 border-b border-gray-700 bg-gray-950 text-white">
+               <div class="py-1 px-3 border-r border-gray-700 text-left">GET</div>
+               <div class="py-1 px-3 border-r border-gray-700 text-left">/users/1/edit</div>
+               <div class="py-1 px-3 border-r border-gray-700 text-left">update</div>
+               <div class="py-1 px-3 text-left">Mostrar el formulario para editar el usuario con ID 1</div>
+             </div>
+             <div class="grid grid-cols-4 border-b border-gray-700 bg-black text-white">
+               <div class="py-1 px-3 border-r border-gray-700 text-left">PATCH</div>
+               <div class="py-1 px-3 border-r border-gray-700 text-left">/users/1</div>
+               <div class="py-1 px-3 border-r border-gray-700 text-left">update</div>
+               <div class="py-1 px-3 text-left">Actualizar el usuario con ID 1</div>
+             </div>
+             <div class="grid grid-cols-4 bg-gray-950 text-white mb-4">
+               <div class="py-1 px-3 border-r border-gray-700 text-left rounded-bl-lg">DELETE</div>
+               <div class="py-1 px-3 border-r border-gray-700 text-left">/users/1</div>
+               <div class="py-1 px-3 border-r border-gray-700 text-left">destroy</div>
+               <div class="py-1 px-3 text-left rounded-br-lg">Eliminar el usuario con ID 1</div>
+             </div>
+           </div>
+         </div>
+        </div>
+    <div class="bg-gray-900 border-2 border-gray-300 rounded-lg font-roboto-mono font-bold text-yellow-400 text-2x1 p-2 mb-4">
+      <h1>Soluciona tu cuadratica!</h1>
+      <div class="text-sm font-normal font-roboto-mono text-justify text-white mt-1">
+  <form action="#" onsubmit="Calcular(event)" class="space-y-2">
+          <div>
+            <label for="a" class="block">Coeficiente a:</label>
+            <input type="number" id="a" name="a"  required class="w-full p-2 border border-gray-300 rounded">
+          </div>
+          <div>
+            <label for="b" class="block">Coeficiente b:</label>
+            <input type="number" id="b" name="b" required class="w-full p-2 border border-gray-300 rounded">
+          </div>
+          <div>
+            <label for="c" class="block">Coeficiente c:</label>
+            <input type="number" id="c" name="c" required class="w-full p-2 border border-gray-300 rounded">
+          </div>
+          <div class="flex space-x-2">
+            <button type="submit" class="flex-1 bg-yellow-400 text-black font-bold py-2 px-4 rounded hover:bg-yellow-300 mb-4">Calcular</button>
+            <button type="button" onclick="toggleCodigoCuadratica()" class="flex-1 bg-gray-700 text-white font-bold py-2 px-4 rounded hover:bg-gray-600 mb-4">Ver código</button>
+          </div>
+        </form>
+       <div id="resultado" class="mt-6 text-center font-bold">
+        </div>
+        <script>
+          function Calcular(event) {
+            event.preventDefault();
+            const a = parseFloat(document.getElementById('a').value);
+            const b = parseFloat(document.getElementById('b').value);
+            const c = parseFloat(document.getElementById('c').value);
+            const resultadoDiv = document.getElementById('resultado');
+            if (a === 0) {
+              resultadoDiv.textContent = 'El coeficiente "a" no puede ser cero.';
+              return;
+            }
+            const discriminante = b * b - 4 * a * c;
+            if (discriminante < 0) {
+              resultadoDiv.textContent = 'La ecuación no tiene soluciones reales.';
+              return;
+            }
+            const x1 = (-b + Math.sqrt(discriminante)) / (2 * a);
+            const x2 = (-b - Math.sqrt(discriminante)) / (2 * a);
+            resultadoDiv.className = 'resultado';
+            if (x1 === x2) {
+              resultadoDiv.innerHTML = `<div class="ecuacion">${a}x² + ${b}x + ${c} = 0</div><p><strong>Solución única: x = ${x1}</strong></p>`;
+            } else {
+              resultadoDiv.innerHTML = `<div class="ecuacion">${a}x² + ${b}x + ${c} = 0</div><p><strong>x₁ = ${x1}</strong></p><p><strong>x₂ = ${x2}</strong></p>`;
+            }
+          }
+        </script>
+            
+        <div id="codigoCuadratica" style="display:none; margin-top:8px;">
+          <pre><code>
+              function Calcular(event) {
+                event.preventDefault();
+                const a = parseFloat(document.getElementById('a').value);
+                const b = parseFloat(document.getElementById('b').value);
+                const c = parseFloat(document.getElementById('c').value);
+                const resultadoDiv = document.getElementById('resultado');
+                if (a === 0) {
+                  resultadoDiv.textContent = 'El coeficiente \"a\" no puede ser cero.';
+                  return;
+                }
+                const discriminante = b * b - 4 * a * c;
+                if (discriminante < 0) {
+                  resultadoDiv.textContent = 'La ecuación no tiene soluciones reales.';
+                  return;
+                }
+                const x1 = (-b + Math.sqrt(discriminante)) / (2 * a);
+                const x2 = (-b - Math.sqrt(discriminante)) / (2 * a);
+                resultadoDiv.className = 'resultado';
+                if (x1 === x2) {
+                  resultadoDiv.innerHTML = `<"div class="ecuacion\">${a}x² + ${b}x + ${c} = 0<"/div><"p>
+                  <"strong>Solución única: x = ${x1}<"/strong><"/p>`;
+                } else {
+                  resultadoDiv.innerHTML = `<"div class="ecuacion\">${a}x² + ${b}x + ${c} = 0<"/div><"p><"strong>x₁ 
+                  = ${x1}<"/strong><"/p><"p><"strong>x₂ = ${x2}<"/strong><"/p>"`;
+                }
+              }
+          </code></pre>
+      </div>
+      <script>
+      function toggleCodigoCuadratica() {
+        const div = document.getElementById('codigoCuadratica');
+        div.style.display = div.style.display === 'none' ? 'block' : 'none';
+      }
+      </script>
+      </div> 
+    </div>
+    <div class="bg-gray-900 border-2 rounded-lg border-gray-300 font-roboto-mono font-bold text-yellow-400 text-2x1 p-2 mb-4">
+      <h1>Calcula el factorial!</h1>
+      <div class="text-sm font-normal font-roboto-mono text-justify text-white ml-2 mr-2">
+        <form action="#" onsubmit="CalcularFactorial(event)" class="space-y-2">
+          <div>
+            <label for="numero" class="block">Número:</label>
+            <input type="number" id="numero" name="numero" min="0" required class="w-full p-2 border border-gray-300 rounded">
+          </div>
+          <div class="flex space-x-2">
+            <button type="submit" class="flex-1 bg-yellow-400 text-black font-bold py-2 px-4 rounded hover:bg-yellow-300 mb-4">Calcular Factorial</button>
+            <button type="button" onclick="toggleCodigoFactorial()" class="flex-1 bg-gray-700 text-white font-bold py-2 px-4 rounded hover:bg-gray-600 mb-4">Ver código</button>
+          </div>
+        </form>
+      <div id="resultadoFactorial" class="mt-2 text-center font-bold"></div>
+      <div id="codigoFactorial" style="display:none; margin-top:8px;">
+        <pre><code>
+            function CalcularFactorial(event){
+              event.preventDefault();
+              const numero = parseInt(document.getElementById('numero').value);
+              const resultadoDiv = document.getElementById('resultadoFactorial');
+              if (numero < 0) {
+                resultadoDiv.textContent = 'El número debe ser un entero no negativo.';
+                return;
+              }
+              let factorial = 1;
+              for (let i = 2; i <= numero; i++) {
+                factorial *= i;
+              }
+              resultadoDiv.innerHTML = `<"p><"strong>El factorial de ${numero} es ${factorial}</"strong></"p>`;
+            }
+        </code></pre>
+      </div>
+      <script>
+      function toggleCodigoFactorial() {
+        const div = document.getElementById('codigoFactorial');
+        div.style.display = div.style.display === 'none' ? 'block' : 'none';
+      }
+      </script>
+      <script>
+        function CalcularFactorial(event){
+          event.preventDefault();
+          const numero = parseInt(document.getElementById('numero').value);
+          const resultadoDiv = document.getElementById('resultadoFactorial');
+          if (numero < 0) {
+            resultadoDiv.textContent = 'El número debe ser un entero no negativo.';
+            return;
+          }
+          let factorial = 1;
+          for (let i = 2; i <= numero; i++) {
+            factorial *= i;
+          }
+          resultadoDiv.innerHTML = `<p><strong>El factorial de ${numero} es ${factorial}</strong></p>`;
 
-</div>
+        }
+      </script>
+      </div>
+    </div>
+    <div class="bg-gray-800 border-2 border-yellow-400 p-2 rounded-lg text-center space-y-2 mt-4 mb-4">
+   <h1 class="font-roboto-mono font-bold text-yellow-400 text-2x1">Comandos Git</h1>
+   <p class ="text-sm font-normal font-roboto-mono text-justify text-white mt-1">
+     <b class="font-roboto-mono font-bold text-yellow-400"> →Nueva Rama</b><br>
+       <b>&nbsp;&nbsp;&nbsp;&nbsp;git branch nombre-de-la-rama</b><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;crea la nueva rama<br>
+      <b>&nbsp;&nbsp;&nbsp;&nbsp;git checkout -b nombre-de-la-rama</b><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;crea la nueva rama y me lleva a ella<br>
+      <b> &nbsp;&nbsp;&nbsp;&nbsp;git checkout nombre-de-la-rama</b><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;me mueve a la rama indicada<br>
+
+      <b class="font-roboto-mono font-bold text-yellow-400"> →Guardar Cambios o crear un commit</b><br>
+       <b>&nbsp;&nbsp;&nbsp;&nbsp;git add .</b><br>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; añade todos los cambios al area de staging<br>
+      <b>&nbsp;&nbsp;&nbsp;&nbsp;git commit -m "Mensaje del commit"</b><br>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; guarda los cambios en el repositorio local con un mensaje descriptivo <br>
+
+      <b class="font-roboto-mono font-bold text-yellow-400">→Commits previos</b><br>
+       <b>&nbsp;&nbsp;&nbsp;&nbsp;git log</b><br>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; muestra el historial de commits<br>
+        <b>&nbsp;&nbsp;&nbsp;&nbsp;git checkout id-del-commit</b><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;me mueve al commit indicado en modo solo lectura<br>
+       <b>&nbsp;&nbsp;&nbsp;&nbsp;git checkout main</b><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;me mueve a la rama principal
+
+    </div>
+
+    <div class="flex space-x-2 justify-center mt-4">
+      <button class="flex-1 bg-gray-800 border-2 border-yellow-400 text-yellow-400 font-roboto-mono font-bold py-2 px-4 rounded hover:bg-gray-700 hover:text-yellow-300" onclick="location.href='<%= root_path %>'">
+        ROOT
+      </button>
+      <button class="flex-1 bg-gray-800 border-2 border-yellow-400 text-yellow-400 font-roboto-mono font-bold py-2 px-4 rounded hover:bg-gray-700 hover:text-yellow-300" onclick="location.href='<%= url_for(controller: :static_pages, action: :somos) %>'">
+        SOMOS
+      </button>
+    </div>
+  </div>

@@ -8,6 +8,8 @@ class StaticPagesController < ApplicationController
   end
 
   def tech
+    # Solo renderiza la vista
   end
+
 
 end
